@@ -54,12 +54,12 @@ export default function Home() {
       </div>
       {loadingResumes && (
         <div className="flex flex-col items-center justify-center">
-          <img src="/images/resume-scan-2.gif" className="w-[200px]" />
+          <img src="/images/resume-scan-2.gif" className="w-[200px]" alt="Scan Icon" />
         </div>
       )}
 
       {!loadingResumes && resumes.length > 0 && (
-        <div className="resumes-section">
+        <div className="resumes-section mb-3">
           {resumes.map((resume) => (
             <ResumeCard key={resume.id} resume={resume} />
           ))}
